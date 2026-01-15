@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Examen civique - QCM</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app__header">
+      <div>
+        <h1>Examen civique - QCM</h1>
+        <p class="subtitle">259 questions officielles · 1 bonne réponse sur 4</p>
+      </div>
+      <div class="timer" id="timer">
+        <div class="timer__label">Temps</div>
+        <div class="timer__value" id="timerValue">45:00</div>
+        <div class="timer__meta" id="timerMeta">0 min écoulées</div>
+      </div>
+    </header>
+
+    <section class="panel" id="setupPanel">
+      <h2>Choisir le mode</h2>
+      <div class="modes">
+        <label class="mode-card">
+          <input type="radio" name="mode" value="all" checked />
+          <div>
+            <div class="mode-title">Toutes les questions</div>
+            <div class="mode-desc">259 questions · toutes thématiques</div>
+          </div>
+        </label>
+        <label class="mode-card">
+          <input type="radio" name="mode" value="situations" />
+          <div>
+            <div class="mode-title">Mises en situation (toutes)</div>
+            <div class="mode-desc">Toutes les situations disponibles</div>
+          </div>
+        </label>
+        <label class="mode-card">
+          <input type="radio" name="mode" value="exam" />
+          <div>
+            <div class="mode-title">Simulation QCM (40)</div>
+            <div class="mode-desc">28 connaissances · 12 mises en situation (scénarios)</div>
+          </div>
+        </label>
+      </div>
+      <button id="startBtn" class="primary">Démarrer le test</button>
+      <p class="note">Durée maximale : 45 minutes. Score requis : 80% (32/40).</p>
+    </section>
+
+    <section class="panel hidden" id="quizPanel">
+      <div class="progress">
+        <div class="progress__text" id="progressText">Question 1/40</div>
+        <div class="progress__bar">
+          <div class="progress__fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question__meta" id="questionMeta"></div>
+        <h2 id="questionText"></h2>
+      </div>
+
+      <form id="optionsForm" class="options"></form>
+
+      <div class="actions">
+        <button id="backBtn" class="secondary" type="button">Précédent</button>
+        <button id="submitBtn" class="primary" type="button">Valider</button>
+        <button id="skipBtn" class="secondary" type="button">Passer</button>
+        <button id="nextBtn" class="secondary hidden" type="button">Question suivante</button>
+      </div>
+
+      <div id="feedback" class="feedback hidden"></div>
+    </section>
+
+    <section class="panel hidden" id="resultPanel">
+      <h2>Résultats</h2>
+      <div class="score" id="scoreText"></div>
+      <div class="pass" id="passText"></div>
+      <div class="actions">
+        <button id="redoWrongBtn" class="secondary hidden">Refaire mes erreurs</button>
+        <button id="restartBtn" class="primary">Recommencer</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="questions.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
