@@ -28,7 +28,7 @@ Application web statique pour s’entraîner à l’examen civique (QCM) en fran
 
 ## Lancer l’application
 
-Ouvrir le fichier index.html dans un navigateur (double‑clic).
+Ouvrir le fichier index.html dans un navigateur (double‑clic) ou cliequez [ici.](https://vladana-perlic.github.io/examen_civique/)
 
 ## Sources
 
@@ -40,3 +40,4 @@ Ouvrir le fichier index.html dans un navigateur (double‑clic).
 
 - Les mises en situation ne sont pas publiées officiellement : elles sont **construites à partir des thématiques et règles officielles**.
 - La réussite est fixée à **80 %** (32/40) pour la simulation.
+
